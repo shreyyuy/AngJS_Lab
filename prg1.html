@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Document</title>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+    </script>
+    <script>
+        var app=angular.module("myApp",[]);
+        app.controller("mycntrl", function($scope)
+        {
+            $scope.firstname="Shreya"
+            $scope.lastname="Varma"
+        });
+    </script>
+</head>
+<body ng-app="myApp">
+    <h1>Angular JS FullName Application</h1>
+    <div ng-controller="mycntrl">
+        Enter First Name: <input type="text" ng-model="firstname">
+        <br><br>
+        Enter Last Name: <input type="text" ng-model="lastname">
+        <br><br>
+        Your Full Name: {{firstname+" "+lastname}}
+    </div>
+</body>
+</html>
